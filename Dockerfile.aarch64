@@ -21,8 +21,3 @@ RUN \
   fi && \
   pip3 install -U --no-cache-dir \
     ${YQ}
-
-# copy local files
-COPY root/ /
-
-ENTRYPOINT ["sh", "/usr/local/bin/yq-entrypoint.sh"]

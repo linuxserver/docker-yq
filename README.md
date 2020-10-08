@@ -1,5 +1,3 @@
-[![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)](https://linuxserver.io)
-
 [![Blog](https://img.shields.io/static/v1.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=linuxserver.io&message=Blog)](https://blog.linuxserver.io "all the things you can do with our containers including How-To guides, opinions and much more!")
 [![Discord](https://img.shields.io/discord/354974912613449730.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=Discord&logo=discord)](https://discord.gg/YWrKVTn "realtime support / chat with the community and the team.")
 [![Discourse](https://img.shields.io/discourse/https/discourse.linuxserver.io/topics.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=discourse)](https://discourse.linuxserver.io "post on our community forum.")
@@ -34,7 +32,7 @@ Find us at:
 [![Docker Stars](https://img.shields.io/docker/stars/linuxserver/yq.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=stars&logo=docker)](https://hub.docker.com/r/linuxserver/yq)
 [![Jenkins Build](https://img.shields.io/jenkins/build?labelColor=555555&logoColor=ffffff&style=for-the-badge&jobUrl=https%3A%2F%2Fci.linuxserver.io%2Fjob%2FDocker-Pipeline-Builders%2Fjob%2Fdocker-yq%2Fjob%2Fmaster%2F&logo=jenkins)](https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-yq/job/master/)
 
-[yq](https://github.com/kislyuk/yq): Command-line YAML/XML processor - jq wrapper for YAML and XML documents
+[yq](https://github.com/kislyuk/yq): Command-line YAML/XML processor - jq wrapper for YAML and XML documents. This image includes `yq`, `jq`, and `xq`.
 
 ## Supported Architectures
 
@@ -58,19 +56,52 @@ The architectures supported by this image are:
 docker run --rm \
   -v "$PWD:$PWD" \
   -w="$PWD" \
+  --entrypoint yq \
   linuxserver/yq \
   .foo.bar input.yml
 ```
 You can replace the last line with any yq command and argument, which will be passed to yq inside the image.
 
+```
+docker run --rm \
+  -v "$PWD:$PWD" \
+  -w="$PWD" \
+  --entrypoint jq \
+  linuxserver/yq \
+  .foo.bar input.json
+```
+You can replace the last line with any jq command and argument, which will be passed to jq inside the image.
+
+```
+docker run --rm \
+  -v "$PWD:$PWD" \
+  -w="$PWD" \
+  --entrypoint xq \
+  linuxserver/yq \
+  .foo.bar input.xml
+```
+You can replace the last line with any xq command and argument, which will be passed to xq inside the image.
+
 ### Recommended method
 
 We provide a very convenient script that allows the yq container to run as if it was installed natively:
 ```
-sudo curl -L --fail https://raw.githubusercontent.com/linuxserver/docker-yq/master/run.sh -o /usr/local/bin/yq
+sudo curl -L --fail https://raw.githubusercontent.com/linuxserver/docker-yq/master/run-yq.sh -o /usr/local/bin/yq
 sudo chmod +x /usr/local/bin/yq
 ```
 Running these two commands on your docker host once will let you issue commands such as `yq .foo.bar input.yml` and the yq container will do its job behind the scenes.
+
+```
+sudo curl -L --fail https://raw.githubusercontent.com/linuxserver/docker-yq/master/run-jq.sh -o /usr/local/bin/jq
+sudo chmod +x /usr/local/bin/jq
+```
+Running these two commands on your docker host once will let you issue commands such as `jq .foo.bar input.json` and the jq container will do its job behind the scenes.
+
+```
+sudo curl -L --fail https://raw.githubusercontent.com/linuxserver/docker-yq/master/run-xq.sh -o /usr/local/bin/xq
+sudo chmod +x /usr/local/bin/xq
+```
+Running these two commands on your docker host once will let you issue commands such as `xq .foo.bar input.xml` and the xq container will do its job behind the scenes.
 
 ## Docker Mods
 [![Docker Mods](https://img.shields.io/badge/dynamic/yaml?style=for-the-badge&color=E68523&label=mods&query=%24.mods%5B%27yq%27%5D.mod_count&url=https%3A%2F%2Fraw.githubusercontent.com%2Flinuxserver%2Fdocker-mods%2Fmaster%2Fmod-list.yml)](https://mods.linuxserver.io/?mod=yq "view available mods for this container.")
