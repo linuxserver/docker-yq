@@ -1,0 +1,21 @@
+---
+
+# jenkins variables
+project_name: docker-yq
+external_type: pip_version
+release_type: stable
+release_tag: latest
+ls_branch: master
+repo_vars:
+  - EXT_PIP = 'yq'
+  - BUILD_VERSION_ARG = 'YQ_VERSION'
+  - LS_USER = 'linuxserver'
+  - LS_REPO = 'docker-yq'
+  - CONTAINER_NAME = 'yq'
+  - DOCKERHUB_IMAGE = 'linuxserver/yq'
+  - DEV_DOCKERHUB_IMAGE = 'lsiodev/yq'
+  - PR_DOCKERHUB_IMAGE = 'lspipepr/yq'
+  - DIST_IMAGE = 'alpine'
+  - MULTIARCH='true'
+  - CI='true'
+  - CI_WEB='false'
