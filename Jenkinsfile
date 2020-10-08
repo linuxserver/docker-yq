@@ -26,8 +26,7 @@ pipeline {
     PR_DOCKERHUB_IMAGE = 'lspipepr/yq'
     DIST_IMAGE = 'alpine'
     MULTIARCH='true'
-    CI='true'
-    CI_WEB='false'
+    CI='false'
   }
   stages {
     // Setup all the basic environment variables needed for the build
