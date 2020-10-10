@@ -30,4 +30,5 @@ fi
 # Always set -i to support piped and terminal input in run/exec
 DOCKER_RUN_OPTIONS="${DOCKER_RUN_OPTIONS} -i"
 
-eval exec docker run --rm "${DOCKER_RUN_OPTIONS}" "${XQ_OPTIONS}" "${VOLUMES}" -w "${PWD}" --entrypoint xq "${IMAGE}" "$@"
+# shellcheck disable=SC2086
+exec docker run --rm ${DOCKER_RUN_OPTIONS} ${XQ_OPTIONS} ${VOLUMES} -w "${PWD}" --entrypoint xq "${IMAGE}" "$@"
