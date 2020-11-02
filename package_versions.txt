@@ -24,7 +24,7 @@ musl-1.1.24-r9
 musl-utils-1.1.24-r9
 ncurses-libs-6.2_p20200523-r0
 ncurses-terminfo-base-6.2_p20200523-r0
-oniguruma-6.9.5-r1
+oniguruma-6.9.5-r2
 procps-3.3.16-r0
 py3-appdirs-1.4.4-r1
 py3-cachecontrol-0.12.6-r0
@@ -58,7 +58,7 @@ scanelf-1.2.6-r0
 shadow-4.8.1-r0
 sqlite-libs-3.32.1-r0
 ssl_client-1.31.1-r19
-tzdata-2020a-r0
+tzdata-2020c-r0
 xz-5.2.5-r0
 xz-libs-5.2.5-r0
 zlib-1.2.11-r3
