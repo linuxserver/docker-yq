@@ -9,13 +9,11 @@
 # You can add additional volumes (or any docker run options) using
 # the ${JQ_OPTIONS} environment variable.
 #
-# You can set a specific image tag from Docker Hub, such as "2.11.1-ls1"
-# using the $YQ_IMAGE_TAG environment variable (defaults to "latest")
+# You can set a specific image and tag, such as "ghcr.io/linuxserver/yq:2.11.1-ls1"
+# using the $YQ_IMAGE_TAG environment variable (defaults to "ghcr.io/linuxserver/yq:latest")
 #
 
 set -e
-
-IMAGE="linuxserver/yq:${YQ_IMAGE_TAG:-latest}"
 
 # Setup volume mounts for compose config and context
 if [ "${PWD}" != '/' ]; then
@@ -31,4 +29,4 @@ fi
 DOCKER_RUN_OPTIONS="${DOCKER_RUN_OPTIONS} -i"
 
 # shellcheck disable=SC2086
-exec docker run --rm ${DOCKER_RUN_OPTIONS} ${JQ_OPTIONS} ${VOLUMES} -w "${PWD}" --entrypoint jq "${IMAGE}" "$@"
+exec docker run --rm ${DOCKER_RUN_OPTIONS} ${JQ_OPTIONS} ${VOLUMES} -w "${PWD}" --entrypoint jq "${YQ_IMAGE_TAG:-ghcr.io/linuxserver/yq:latest}" "$@"
