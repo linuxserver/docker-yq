@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-alpine:3.13
+FROM ghcr.io/linuxserver/baseimage-alpine:3.15
 
 # set version label
 ARG BUILD_DATE
@@ -6,6 +6,8 @@ ARG VERSION
 ARG YQ_VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="nemchik"
+
+ARG PIP_ARGS="-U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.15/"
 
 RUN \
   echo "**** install runtime packages ****" && \
@@ -19,5 +21,6 @@ RUN \
   else \
     YQ="yq==${YQ_VERSION}"; \
   fi && \
-  pip3 install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine/ \
+  pip3 install ${PIP_ARGS} pip setuptools wheel && \
+  pip install ${PIP_ARGS} \
     ${YQ}
