@@ -9,8 +9,8 @@
 # You can add additional volumes (or any docker run options) using
 # the ${JQ_OPTIONS} environment variable.
 #
-# You can set a specific image and tag, such as "ghcr.io/linuxserver/yq:2.11.1-ls1"
-# using the $YQ_IMAGE_TAG environment variable (defaults to "ghcr.io/linuxserver/yq:latest")
+# You can set a specific image and tag, such as "lscr.io/linuxserver/yq:2.11.1-ls1"
+# using the $YQ_IMAGE_TAG environment variable (defaults to "lscr.io/linuxserver/yq:latest")
 #
 
 set -e
@@ -29,4 +29,4 @@ fi
 DOCKER_RUN_OPTIONS="${DOCKER_RUN_OPTIONS} -i"
 
 # shellcheck disable=SC2086
-exec docker run --rm ${DOCKER_RUN_OPTIONS} ${JQ_OPTIONS} ${VOLUMES} -w "${PWD}" --entrypoint jq "${YQ_IMAGE_TAG:-ghcr.io/linuxserver/yq:latest}" "$@"
+exec docker run --rm ${DOCKER_RUN_OPTIONS} ${JQ_OPTIONS} ${VOLUMES} -w "${PWD}" --entrypoint jq "${YQ_IMAGE_TAG:-lscr.io/linuxserver/yq:latest}" "$@"
