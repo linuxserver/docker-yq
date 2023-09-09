@@ -63,5 +63,5 @@ utmps-libs                  0.1.2.1-r1              apk
 wheel                       0.41.2                  python  
 xmltodict                   0.13.0                  python  
 xz-libs                     5.4.3-r0                apk     
-yq                          3.2.2                   python  
+yq                          3.2.3                   python  
 zlib                        1.2.13-r1               apk     
