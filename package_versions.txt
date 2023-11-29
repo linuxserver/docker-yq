@@ -60,7 +60,7 @@ ssl_client                1.36.1-r5               apk
 tomlkit                   0.12.3                  python  
 tzdata                    2023c-r1                apk     
 utmps-libs                0.1.2.1-r1              apk     
-wheel                     0.41.3                  python  
+wheel                     0.42.0                  python  
 xmltodict                 0.13.0                  python  
 xz-libs                   5.4.3-r0                apk     
 yq                        3.2.3                   python  
