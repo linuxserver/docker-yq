@@ -58,7 +58,7 @@ skalibs                 2.13.1.1-r1             apk
 sqlite-libs             3.41.2-r2               apk     
 ssl_client              1.36.1-r5               apk     
 tomlkit                 0.12.3                  python  
-tzdata                  2023c-r1                apk     
+tzdata                  2023d-r0                apk     
 utmps-libs              0.1.2.1-r1              apk     
 wheel                   0.42.0                  python  
 xmltodict               0.13.0                  python  
