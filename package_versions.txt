@@ -14,6 +14,7 @@ busybox-binsh           1.36.1-r15             apk
 c-ares                  1.27.0-r0              apk                      
 ca-certificates         20240226-r0            apk                      
 ca-certificates-bundle  20240226-r0            apk                      
+catatonit               0.2.0-r0               apk                      
 coreutils               9.4-r2                 apk                      
 coreutils-env           9.4-r2                 apk                      
 coreutils-fmt           9.4-r2                 apk                      
@@ -62,7 +63,7 @@ shadow                  4.14.2-r0              apk
 skalibs                 2.14.0.1-r0            apk                      
 sqlite-libs             3.44.2-r0              apk                      
 ssl_client              1.36.1-r15             apk                      
-tomlkit                 0.12.4                 python                   
+tomlkit                 0.12.5                 python                   
 tzdata                  2024a-r0               apk                      
 utmps-libs              0.1.2.2-r0             apk                      
 wheel                   0.43.0                 python                   
