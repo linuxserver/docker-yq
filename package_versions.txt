@@ -62,7 +62,7 @@ shadow                  4.15.1-r0              apk
 skalibs                 2.14.1.1-r0            apk                      
 sqlite-libs             3.45.3-r1              apk                      
 ssl_client              1.36.1-r29             apk                      
-tomlkit                 0.13.0                 python                   
+tomlkit                 0.13.2                 python                   
 tzdata                  2024a-r1               apk                      
 utmps-libs              0.1.2.2-r1             apk                      
 wheel                   0.44.0                 python                   
