@@ -52,7 +52,6 @@ The architectures supported by this image are:
 | :----: | :----: | ---- |
 | x86-64 | ✅ | amd64-\<version tag\> |
 | arm64 | ✅ | arm64v8-\<version tag\> |
-| armhf | ❌ | |
 
 ## Usage
 
@@ -147,16 +146,17 @@ docker build \
   -t linuxserver/yq:latest .
 ```
 
-The ARM variants can be built on x86_64 hardware using `multiarch/qemu-user-static`
+The ARM variants can be built on x86_64 hardware and vice versa using `lscr.io/linuxserver/qemu-static`
 
-```text
-docker run --rm --privileged multiarch/qemu-user-static:register --reset
+```bash
+docker run --rm --privileged lscr.io/linuxserver/qemu-static --reset
 ```
 
 Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64`.
 
 ## Versions
 
+* **09.07.25:** - Rebase to Alpine 3.22.
 * **29.05.24:** - Rebase to Alpine 3.20.
 * **08.01.24:** - Rebase to Alpine 3.19.
 * **19.09.22:** - Rebase to Alpine 3.18, deprecate armhf.
