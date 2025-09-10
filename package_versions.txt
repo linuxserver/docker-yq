@@ -67,7 +67,7 @@ tomlkit                 0.13.3            python
 tzdata                  2025b-r0          apk                      
 utmps-libs              0.1.3.1-r0        apk                      
 wheel                   0.45.1            python                   
-xmltodict               0.14.2            python                   
+xmltodict               0.15.1            python                   
 xz-libs                 5.8.1-r0          apk                      
 yq                      3.4.3             python                   
 zlib                    1.3.1-r2          apk                      
