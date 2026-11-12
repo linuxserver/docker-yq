@@ -4,8 +4,8 @@ acl-libs                2.3.2-r1          apk
 alpine-baselayout       3.7.0-r0          apk                      
 alpine-baselayout-data  3.7.0-r0          apk                      
 alpine-keys             2.5-r0            apk                      
-alpine-release          3.22.7-r0         apk                      
-apk-tools               2.14.12-r0        apk                      
+alpine-release          3.22.8-r0         apk                      
+apk-tools               2.14.13-r0        apk                      
 argcomplete             3.7.2             python                   
 bash                    5.2.37-r0         apk                      
 brotli-libs             1.1.1-r0          apk                      
@@ -23,7 +23,7 @@ curl                    8.14.1-r4         apk
 findutils               4.10.0-r0         apk                      
 gdbm                    1.24-r0           apk                      
 jq                      1.8.2-r0          apk                      
-libapk2                 2.14.12-r0        apk                      
+libapk2                 2.14.13-r0        apk                      
 libattr                 2.5.2-r2          apk                      
 libbsd                  0.12.2-r0         apk                      
 libbz2                  1.0.8-r6          apk                      
@@ -65,11 +65,11 @@ skalibs-libs            2.14.4.0-r0       apk
 sqlite-libs             3.49.2-r1         apk                      
 ssl_client              1.37.0-r20        apk                      
 tomlkit                 0.15.2            python                   
-tzdata                  2026e-r0          apk                      
+tzdata                  2026f-r0          apk                      
 utmps-libs              0.1.3.1-r0        apk                      
 wheel                   0.48.0            python                   
 xmltodict               1.0.4             python                   
 xz-libs                 5.8.4-r0          apk                      
 yq                      4.4.5             python                   
-zlib                    1.3.2-r1          apk                      
+zlib                    1.4-r0            apk                      
 zstd-libs               1.5.7-r0          apk                      
